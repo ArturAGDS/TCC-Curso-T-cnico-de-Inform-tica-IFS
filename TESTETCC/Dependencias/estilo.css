@@ -1,0 +1,215 @@
+* {
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 60px 60px 1fr 60px;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "cabecalho"
+    "navegacao"
+    "principal"
+    "rodape";
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 4px 9px -2px rgba(0, 0, 0, 0.75);
+}
+
+.cabecalho > h1 {
+    margin: 0px;
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+.cabecalho > h2 {
+    margin: 0px;
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+.principal {
+    grid-area: principal;
+    height: calc(100vh - 180px);
+    background-color: #fde3bb;
+    padding: 20px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.conteudo {
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #ffff;
+    padding: 20px;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.navegacao {
+    grid-area: navegacao;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #555;
+}
+
+.navegacao > a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.3rem;
+    background-color: rgb(33, 150, 243);
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+
+.navegacao > a.verde{ background-color: #4CAF50; }
+.navegacao > a.vermelho{ background-color: #f44336; }
+/* .tabela-responsiva{
+   
+    position: relative;
+    height: 100%;
+    width: 100%;
+    
+} */
+
+.col-md-4{
+    margin-bottom: 10px;
+}
+
+.btn btn-primary btn-lg {
+    margin: 10px;
+}
+
+.rodape{
+    grid-area: rodape;
+    background-color: red;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 0.8rem;
+    padding-right: 20px;
+    color: black;
+
+}
+
+.modulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.modulo {
+    flex-basis: 45%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.modulo   > h3 {
+    margin: 0px;
+    color: white;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: black;
+    
+}
+
+.modulo > ul {
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+}
+
+.modulo > ul > li{
+    padding: 7px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.modulo > ul > li > a{
+    display: flex;
+    text-decoration: none;
+    color: #222;
+}
+
+.modulo > ul > li:hover{
+    background-color: #EEE;
+
+}
+
+.modulo { border: 2px solid black; }
+/* .modulo.verde h3 { background-color: #4CAF50; } */
+
+/* .modulo.vermelho { border: 2px solid #f44336; }
+.modulo.vermelho h3 { background-color: #f44336; }
+
+.modulo.azul { border: 2px solid #2196f3; }
+.modulo.azul h3 { background-color: #2196f3; }
+
+.modulo.roxo { border: 2px solid #9c27b0; }
+.modulo.roxo h3 { background-color:#9c27b0; }
+
+.modulo.laranja { border: 2px solid orange; }
+.modulo.laranja h3 { background-color: orange; }
+
+.modulo.verde-escuro { border: 2px solid #1b5e20; }
+.modulo.verde-escuro h3 { background-color: #1b5e20; }
+
+.modulo.vermelho-escuro { border: 2px solid #b71c1c; }
+.modulo.vermelho-escuro h3 { background-color: #b71c1c; }
+
+.modulo.azul-escuro { border: 2px solid #0d47a1; }
+.modulo.azul-escuro h3 { background-color: #0d47a1; }
+
+.modulo.roxo-escuro { border: 2px solid #4a148c; }
+.modulo.roxo-escuro h3 { background-color: #4a148c; } */
+.edit {
+    display: inline-flex;
+    text-align: right;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 10px 12px;
+    background-color: #37afb7;
+}
+.trash {
+    display: inline-flex;
+    text-align: right;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 10px 12px;
+    background-color: #b73737;
+}
+.trash:hover {
+    background-color: #a33131;
+}
+
+.edit:hover {
+    background-color: #319ca3;
+}
+
+.req {
+    color: rgb(152, 161, 18);
+}
+
+.error{
+    color: red;
+}
